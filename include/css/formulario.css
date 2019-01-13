@@ -1,0 +1,81 @@
+body { 
+	padding-top: 120px;
+	background-attachment: fixed;
+	background-color: #332F2C;
+	background-image: url("../../img/367048.jpg");
+	background-size: 100% 100%;
+}
+
+.container {
+	background-color: rgba(255,255,255,0.8);
+	max-width: 960px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.8) 20px 20px 20px;
+}
+
+.tamaño {
+	max-width:80%;
+}
+
+.redes {
+	margin: auto;
+	max-width: 1050px;
+}
+
+.lh-condensed { line-height: 1.25; }
+
+.carousel-inner img {
+      width: 100%;
+}
+
+.interior {
+     max-width: 70%;
+}
+
+.estilotexto{
+	font-family: Poppins, Bebas Neue,arial;
+	font-variant: small-caps;
+	font-weight: bolder;
+	font-style: italic;
+	font-size: 25px;
+}
+
+.textoblanco{
+	color: white;
+}
+
+.tamañonav{
+	max-height: 35px;
+}
+
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+.login-block{
+float:left;
+width:100%;
+padding : 50px 0;
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#073f8c; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #073f8c; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+
+.glyph-icon svg {
+width:8px;
+height:8px;
+}
+
+.si-glyph-delete {
+fill: blue;
+}
+
+.si-glyph * {
+fill: red;
+}
