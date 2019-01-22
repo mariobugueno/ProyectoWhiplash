@@ -29,7 +29,8 @@ while($fila=mysql_fetch_array($peticion)) {
 	echo "<tr>";
 		echo "<td>".$fila['nombre']."</td>";
 		echo "<td>".$fila['apellido']."</td>";
-		echo "<td>".$fila['email']."</td>";
+		echo "<td><a style=\"text-decoration:underline;cursor:pointer;\" onclick=\"eliminarDato('".$fila['email']."')\">".$fila['email']."</a></td>";
+		//echo "<td>".$fila['email']."</td>";
 	}
 ?>
 	</tbody>

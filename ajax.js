@@ -59,3 +59,28 @@ function LimpiarCampos(){
   document.nuevo_admin.password.value="";
   document.nuevo_admin.nombre.focus();
 }
+
+function eliminarDato(email){
+   //donde se mostrará el resultado de la eliminacion
+   divResultado = document.getElementById('resultado');
+   
+   //usaremos un cuadro de confirmacion 
+   var eliminar = confirm("¿Realmente desea eliminar esta cuenta?")
+   if ( eliminar ) {
+   //instanciamos el objetoAjax
+   ajax=objetoAjax();
+   //uso del medotod GET
+   //indicamos el archivo que realizará el proceso de eliminación
+   //junto con un valor que representa el id del empleado
+   ajax.open("GET", "eliminarcuenta.php?email="+email);
+   ajax.onreadystatechange=function() {
+   if (ajax.readyState==4) {
+   //mostrar resultados en esta capa
+   divResultado.innerHTML = ajax.responseText
+   }
+   }
+   //como hacemos uso del metodo GET
+   //colocamos null
+   ajax.send(null)
+   }
+}
