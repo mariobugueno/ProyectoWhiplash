@@ -69,6 +69,7 @@
   <section class="login-block">
     <div class="container tamaño">
       <div class="row">
+        <div class="col-md-3 login-sec"></div>
         <div class="col-md-6 login-sec">
           <h2 class="text-center estilotexto text-uppercase">nueva cuenta</h2>
           <form name="nuevo_admin" class="login-form" action="" onsubmit="enviarDatosAdminNuevo(); return false">
@@ -97,21 +98,7 @@
             </div>
           </form>
         </div>
-        <div class="col-md-6 banner login-sec">
-          <h2 class="text-center estilotexto text-uppercase">modificar cuenta</h2>
-          <form action="confirmaremail.php" method="post">
-            <div class="row">
-            <div class="col-md-12 form-group">
-              <label for="exampleInputEmail1" class="text-uppercase">ingresar email de la cuenta</label>
-              <input type="email" class="form-control" name="email" placeholder="Email" required>
-            </div>
-            </div>
-            <div class="form-check text-center py-5">
-              <br><br>
-              <button type="submit" class="btn btn-login estilotexto">modificar</button>
-            </div>
-          </form>
-        </div>
+        <div class="col-md-3 login-sec"></div>
       </div>
       <h2 class="text-center estilotexto text-uppercase">listado de cuentas de administrador</h2>
       <br><div id="formulario"></div>

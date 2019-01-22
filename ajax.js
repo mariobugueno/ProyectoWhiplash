@@ -34,7 +34,7 @@ function enviarDatosAdminNuevo(){
  
   //uso del medotod POST
   //archivo que realizará la operacion
-  //registro.php
+  //nuevoadmin.php
   ajax.open("POST", "nuevoadmin.php",true);
   //cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
   ajax.onreadystatechange=function() {
@@ -71,7 +71,7 @@ function eliminarDato(email){
    ajax=objetoAjax();
    //uso del medotod GET
    //indicamos el archivo que realizará el proceso de eliminación
-   //junto con un valor que representa el id del empleado
+   //junto con el email del empleado
    ajax.open("GET", "eliminarcuenta.php?email="+email);
    ajax.onreadystatechange=function() {
    if (ajax.readyState==4) {
@@ -100,7 +100,7 @@ function enviarDatosAdmin(){
   ajax=objetoAjax();
   //usando del medoto POST
   //archivo que realizará la operacion
-  //actualizacion.php
+  //modificarcuenta.php
   ajax.open("POST", "modificarcuenta.php",true);
   ajax.onreadystatechange=function() {
   if (ajax.readyState==4) {
