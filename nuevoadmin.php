@@ -1,7 +1,7 @@
 <?php
 
 $conexion=mysql_connect("localhost","root","m1189t0390");
-if (!$conexion) {
+if(!$conexion) {
 	die("no se ha podido conectar por la siguiente razon: ".mysql_error());
 }
 $nombre = $_POST['nombre'];

@@ -20,6 +20,7 @@ $peticion=mysql_query("SELECT * FROM admin");
 			<th scope="col" class="estilotexto">nombre</th>
             <th scope="col" class="estilotexto">apellido</th>
             <th scope="col" class="estilotexto">email</th>
+            <th scope="col" class="estilotexto">accion</th>
         </tr>
     </thead>
     <tbody>
@@ -29,8 +30,10 @@ while($fila=mysql_fetch_array($peticion)) {
 	echo "<tr>";
 		echo "<td>".$fila['nombre']."</td>";
 		echo "<td>".$fila['apellido']."</td>";
-		echo "<td><a style=\"text-decoration:underline;cursor:pointer;\" onclick=\"eliminarDato('".$fila['email']."')\">".$fila['email']."</a></td>";
-		//echo "<td>".$fila['email']."</td>";
+		echo "<td>".$fila['email']."</td>";
+		echo "<td><input type='image' height='32px' name='editar' onclick=\"pedirDatos('".$fila['email']."')\" src='img/glyph-iconset-master/svg/si-glyph-pencil.svg'/>";
+		echo "	  <input type='image' height='32px' name='eliminar' onclick=\"eliminarDato('".$fila['email']."')\" src='img/glyph-iconset-master/svg/si-glyph-delete.svg'/></td>";
+
 	}
 ?>
 	</tbody>

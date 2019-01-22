@@ -84,3 +84,56 @@ function eliminarDato(email){
    ajax.send(null)
    }
 }
+
+function enviarDatosAdmin(){
+
+  //donde se mostrará lo resultados
+  divResultado = document.getElementById('resultado');
+  divFormulario = document.getElementById('formulario');
+  //valores de los inputs
+  nom=document.frmadmin.nombre.value;
+  ape=document.frmadmin.apellido.value;
+  ema=document.frmadmin.email.value;
+  pas=document.frmadmin.password.value;
+
+  //instanciamos el objetoAjax
+  ajax=objetoAjax();
+  //usando del medoto POST
+  //archivo que realizará la operacion
+  //actualizacion.php
+  ajax.open("POST", "modificarcuenta.php",true);
+  ajax.onreadystatechange=function() {
+  if (ajax.readyState==4) {
+  //mostrar los nuevos registros en esta capa
+  divResultado.innerHTML = ajax.responseText
+  }
+
+  }
+  //muy importante este encabezado ya que hacemos uso de un formulario
+  ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  //enviando los valores
+  ajax.send("nombre="+nom+"&apellido="+ape+"&email="+ema+"&password="+pas)
+}
+
+function pedirDatos(email){
+  //donde se mostrará el formulario con los datos
+  divFormulario = document.getElementById('formulario');
+  //instanciamos el objetoAjax
+  ajax=objetoAjax();
+  //uso del medotod GET
+  ajax.open("GET", "consulta_por_email.php?email="+email);
+  
+  ajax.onreadystatechange=function() {
+
+  if (ajax.readyState==4) {
+  //mostrar resultados en esta capa
+  divFormulario.innerHTML = ajax.responseText
+  //mostrar el formulario
+  divFormulario.style.display="block";
+  }
+
+  }
+  //como hacemos uso del metodo GET
+  //colocamos null
+  ajax.send(null)
+}

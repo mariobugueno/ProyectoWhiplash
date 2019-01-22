@@ -114,6 +114,7 @@
         </div>
       </div>
       <h2 class="text-center estilotexto text-uppercase">listado de cuentas de administrador</h2>
+      <br><div id="formulario"></div>
       <div id="resultado"><?php include('consulta_cuentasadmin.php');?></div>
       <br>
     </div>
