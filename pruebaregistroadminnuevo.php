@@ -10,6 +10,8 @@
   <script src="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css"></script>
   <link rel="stylesheet" href="include/css/bootstrap.css">
   <link rel="stylesheet" href="include/css/formulario.css">
+
+  <script language="JavaScript" type="text/javascript" src="ajax.js"></script>
   <title>Whiplash Rock Cover Band</title>
 </head>
 <body>
@@ -69,7 +71,7 @@
       <div class="row">
         <div class="col-md-4 login-sec">
           <h2 class="text-center estilotexto text-uppercase">nueva cuenta</h2>
-          <form class="login-form" action="nuevoadmin.php" method="post">
+          <form name="nuevo_admin" class="login-form" action="" onsubmit="enviarDatosAdminNuevo(); return false">
             <div class="row">
             <div class="col-md-6 form-group">
               <label for="exampleInputEmail1" class="text-uppercase">Nombre</label>
@@ -83,7 +85,7 @@
           <div class="row">
             <div class="col-md-6 form-group">
               <label for="exampleInputPassword1" class="text-uppercase">email</label>
-              <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
             </div>
             <div class="col-md-6 form-group">
               <label for="exampleInputEmail1" class="text-uppercase">Contraseña</label>
@@ -101,7 +103,7 @@
             <div class="row">
             <div class="col-md-12 form-group">
               <label for="exampleInputEmail1" class="text-uppercase">ingresar email de la cuenta</label>
-              <input type="email" class="form-control" name="email" id="inputemail3" placeholder="Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
             </div>
             </div>
             <div class="form-check text-center py-5">
@@ -116,7 +118,7 @@
             <div class="row">
             <div class="col-md-12 form-group">
               <label for="exampleInputEmail1" class="text-uppercase">ingresar email de la cuenta</label>
-              <input type="email" class="form-control" name="email" id="inputemail3" placeholder="Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
             </div>
             </div>
             <div class="form-check text-center py-5">
@@ -125,6 +127,9 @@
           </form>
         </div>
       </div>
+      <h2 class="text-center estilotexto text-uppercase">listado de cuentas de administrador</h2>
+      <div id="resultado"><?php include('consulta_cuentasadmin.php');?></div>
+      <br>
     </div>
   </section>
 

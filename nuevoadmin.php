@@ -11,10 +11,9 @@ $password = $_POST['password'];
 
 mysql_select_db("whiplash",$conexion);
 mysql_query("INSERT INTO admin(email,password,nombre,apellido) VALUES('$email','$password','$nombre','$apellido')");
-echo "se ha creado una nueva cuenta. <a href='pruebaregistroadminnuevo.php'>volver</a>";
-
-
+echo "<div class='estilotexto'>nueva cuenta creada exitosamente.</div>";
 
 mysql_close($conexion);
 
+include('consulta_cuentasadmin.php');
 ?>

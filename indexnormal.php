@@ -88,7 +88,7 @@
                     <p class='lead'>".$public['contenido']."</p>
                     <hr>
                     <p>
-                      <button class='btn btn-dark estilotexto' type='button' data-toggle='collapse' data-target='#collapseExample' aria-expanded='false' aria-controls='collapseExample'>
+                      <button class='btn btn-dark' type='button' data-toggle='collapse' data-target='#collapseExample' aria-expanded='false' aria-controls='collapseExample'>
                         ver comentarios
                       </button>
                     </p>";
@@ -113,11 +113,11 @@
                         <div class='row'>
                           <div class='col-md-6 form-group'>
                             <input type='hidden' name='id_public' value='$id'>
-                            <label for='exampleInputEmail1' class='text-uppercase'>nombre</label>
+                            
                             <input type='text' class='form-control' name='autor' id='inputAutor' placeholder='Nombre' required>
                           </div>
                           <div class='col-md-12 form-group'>
-                            <label for='exampleInputPassword1' class='text-uppercase'>comentario</label>
+                            
                             <textarea class='form-control' rows='2'  name='comentario' id='inputContenido' placeholder='Comentario' required></textarea>
                           </div>
                         </div>
